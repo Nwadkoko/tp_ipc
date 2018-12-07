@@ -11,7 +11,7 @@ private:
     int msgqid;
 public:
     MsgQueue();
-    explicit MsgQueue(int key, int msgflg);
+    MsgQueue(int key, int msgflg);
     int getMsgQid();
     void sendMessage(int msqid, const void* msgp, size_t msgsz, int msgflg);
     void readMessage(int msqid, void* msgp, size_t msgsz, long msgtyp, int msgflg);

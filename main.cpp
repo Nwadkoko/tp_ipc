@@ -1,5 +1,10 @@
+#include <iostream>
+#include <memory>
+
 #include "msgqueue.h"
+#include "memoire.h"
 
 int main(){
-    MsgQueue *_msgQueue = new MsgQueue(1234, IPC_CREAT | 0666);
+    auto queue = MsgQueue(1234, IPC_CREAT | 0666);
+    Memoire memoire;
 } 
