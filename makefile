@@ -10,14 +10,14 @@ all: main.o
 	$(CC) $(CPPFLAGS) $(DIR)main.o 			-o $(DIR)main
 
 memoire.o: memoire.cpp memoire.h
-	$(CC) $(CPPFLAGS) $(DIR)memoire.cpp 	-o $(DIR)memoire.o 
+	$(CC) $(CPPFLAGS) -c memoire.cpp 		-o $(DIR)memoire.o 
 
 msgqueue.o: msgqueue.cpp msgqueue.h
-	$(CC) $(CPPFLAGS) $(DIR)msgqueue.cpp 	-o $(DIR)msgqueue.o 
+	$(CC) $(CPPFLAGS) -c msgqueue.cpp 		-o $(DIR)msgqueue.o 
 
 
 semaphore.o: semaphore.cpp semaphore.h
-	$(CC) $(CPPFLAGS) $(DIR)semaphore.cpp 	-o $(DIR)semaphore.o 
+	$(CC) $(CPPFLAGS) -c semaphore.cpp 		-o $(DIR)semaphore.o 
 
 cleanup:
 	rm $(DIR)*
