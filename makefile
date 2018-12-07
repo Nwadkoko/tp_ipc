@@ -6,8 +6,12 @@ DIR = build/
 
 CPPFLAGS= -std=c++17
 
-all: main.o
+all: main.o memoire.o msgqueue.o semaphore.o
 	$(CC) $(CPPFLAGS) $(DIR)main.o 			-o $(DIR)main
+
+main.o: main.cpp
+	$(CC) $(CPPFLAGS) -c main.cpp 			-o $(DIR)main.o
+
 
 memoire.o: memoire.cpp memoire.h
 	$(CC) $(CPPFLAGS) -c memoire.cpp 		-o $(DIR)memoire.o 
